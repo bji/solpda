@@ -37,14 +37,16 @@ fn usage_string() -> String
     \x20 seed is output as \".SEED\"\n\n\
     \x20 Example:\n\
     \x20   $ PROGRAM_ID=TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA\n\n\
-    \x20   $ solpda --no-bump-seed $PROGRAM_ID u8[5, 6] String[Hello, world!]
-    \x20     bad one\n\n\
-    \x20   $ solpda $PROGRAM_ID u8[5, 6] String[Hello, world!] u8[10]\n\
-    \x20     xxxxxxx\n\n\
-    \x20   $ solpda --bytes $PROGRAM_ID u8[5, 6] String[Hello, world!]\n\
-    \x20     xxxxxxx.yyy\n\n\
-    \x20   $ solpda --bytes $PROGRAM_ID u8[5, 6] String[Hello, world!]\n\
-    \x20     [1, 2, 3].yyy\n\n\
+    \x20   $ solpda --no-bump-seed $PROGRAM_ID u8[5,6] 'String[Hello, world!]'
+    \x20     Cannot find PDA, consider allowing bump seed\n\n\
+    \x20   $ solpda $PROGRAM_ID u8[5,6] 'String[Hello, world!]' u8[10]\n\
+    \x20     A89GCYdsataUVrFDbrV416NEZnFZoa6X4CR5ZdSPJohC.255\n\n\
+    \x20   $ solpda --bytes $PROGRAM_ID u8[5,6] 'String[Hello, world!]'\n\
+    \x20     [181,99,247,119,206,49,238,212,128,158,162,102,53,7,236,105,\\\n\
+    \x20      123,108,5,22,43,79,12,70,149,227,221,110,66,137,233,124].255\n\n\
+    \x20   $ solpda --no-bump-seed --bytes $PROGRAM_ID u8[5,6] 'String[Hello, world!]' u8[10]\n\
+    \x20     [42,46,105,65,231,188,62,57,241,154,124,211,106,133,201,219,\\\n\
+    \x20      254,69,136,17,107,6,180,194,222,36,56,108,166,70,47,226]\n\n\
     \x20 As a convenience, solpda also supports the -pubkey argument which causes\n\
     \x20 it to do nothing other than read the <PROGRAM_ID> argument, which is\n\
     \x20 either a Base58-encoded public key, or a key file, or an array of u8\n\

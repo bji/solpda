@@ -56,17 +56,19 @@ Usage: solpda [--help]
   Example:
     $ PROGRAM_ID=TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
 
-    $ solpda --no-bump-seed $PROGRAM_ID u8[5, 6] String[Hello, world!]
-          bad one
+    $ solpda --no-bump-seed $PROGRAM_ID u8[5,6] 'String[Hello, world!]'
+          Cannot find PDA, consider allowing bump seed
 
-    $ solpda $PROGRAM_ID u8[5, 6] String[Hello, world!] u8[10]
-      xxxxxxx
+    $ solpda $PROGRAM_ID u8[5,6] 'String[Hello, world!]' u8[10]
+      A89GCYdsataUVrFDbrV416NEZnFZoa6X4CR5ZdSPJohC.255
 
-    $ solpda --bytes $PROGRAM_ID u8[5, 6] String[Hello, world!]
-      xxxxxxx.yyy
+    $ solpda --bytes $PROGRAM_ID u8[5,6] 'String[Hello, world!]'
+      [181,99,247,119,206,49,238,212,128,158,162,102,53,7,236,105,\
+       123,108,5,22,43,79,12,70,149,227,221,110,66,137,233,124].255
 
-    $ solpda --bytes $PROGRAM_ID u8[5, 6] String[Hello, world!]
-      [1, 2, 3].yyy
+    $ solpda --no-bump-seed --bytes $PROGRAM_ID u8[5,6] 'String[Hello, world!]' 
+      [42,46,105,65,231,188,62,57,241,154,124,211,106,133,201,219,\
+       254,69,136,17,107,6,180,194,222,36,56,108,166,70,47,226]
 
   As a convenience, solpda also supports the -pubkey argument which causes
   it to do nothing other than read the <PROGRAM_ID> argument, which is
