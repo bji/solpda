@@ -37,7 +37,7 @@ fn usage_string() -> String
     \x20 seed is output as \".SEED\"\n\n\
     \x20 Example:\n\
     \x20   $ PROGRAM_ID=TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA\n\n\
-    \x20   $ solpda --no-bump-seed $PROGRAM_ID u8[5,6] 'String[Hello, world!]'
+    \x20   $ solpda --no-bump-seed $PROGRAM_ID u8[5,6] 'String[Hello, world!]'\n\
     \x20     Cannot find PDA, consider allowing bump seed\n\n\
     \x20   $ solpda $PROGRAM_ID u8[5,6] 'String[Hello, world!]' u8[10]\n\
     \x20     A89GCYdsataUVrFDbrV416NEZnFZoa6X4CR5ZdSPJohC.255\n\n\

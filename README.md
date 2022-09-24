@@ -57,7 +57,7 @@ Usage: solpda [--help]
     $ PROGRAM_ID=TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
 
     $ solpda --no-bump-seed $PROGRAM_ID u8[5,6] 'String[Hello, world!]'
-          Cannot find PDA, consider allowing bump seed
+      Cannot find PDA, consider allowing bump seed
 
     $ solpda $PROGRAM_ID u8[5,6] 'String[Hello, world!]' u8[10]
       A89GCYdsataUVrFDbrV416NEZnFZoa6X4CR5ZdSPJohC.255
