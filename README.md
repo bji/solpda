@@ -12,6 +12,9 @@ solpda actually has two modes: PDA and "pubkey".  The pubkey mode is just a conv
 be displayed in several forms.  It is most useful for converting a Base58 encoded address into an array of bytes;
 or for converting an array of bytes into a Base58 encoded address.
 
+# Command Help #
+
+
 ```
 $ solpda --help
 
